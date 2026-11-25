@@ -18,6 +18,17 @@ MESSAGES = {
     "GATE_BLOCKED": "存在阻断项，不能签发",
     "NOT_APPROVED": "批次尚未签发",
     "BAD_REQUEST": "请求内容不完整",
+    "TICKET_NOT_FOUND": "原票余额账户不存在",
+    "ORDER_NOT_FOUND": "改期单不存在",
+    "TICKET_ID_REQUIRED": "缺少原票标识",
+    "ORDERS_REQUIRED": "缺少改期单",
+    "INVALID_BALANCE": "原票余额不合法",
+    "ORDER_CONFLICT": "相同改期单提交内容不一致",
+    "BALANCE_CONFLICT": "余额变更与已有抵扣冲突",
+    "BALANCE_BUSY": "余额正在处理，请重试",
+    "ORDER_NOT_CONFIRMABLE": "当前改期单不能确认抵扣",
+    "CONFIRMED_DEDUCTION_LOCKED": "已确认抵扣不能撤销",
+    "ORDER_CANCELED": "改期单已撤销",
 }
 
 

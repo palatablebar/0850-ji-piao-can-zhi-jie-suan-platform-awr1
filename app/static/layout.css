@@ -5,8 +5,10 @@
 .p0850 .toolbar .actor,.p0850 .toolbar .rule-chip{color:#e0ebff}.p0850 .toolbar button,.p0850 .toolbar select{color:var(--ink)}
 .p0850 .toolbar::after{content:"";position:absolute;left:12px;right:12px;bottom:8px;border-bottom:1px dashed var(--line)}
 .p0850 main{padding:16px}
-.p0850 .board{grid-template-columns:minmax(0,2fr) minmax(245px,1fr);position:relative;grid-template-areas:"table chart" "issues chart" "ledger review"}
+.p0850 .board{grid-template-columns:minmax(0,2fr) minmax(245px,1fr);position:relative;grid-template-areas:"rebook rebook" "table chart" "issues chart" "ledger review"}
+.p0850 #panel-rebook{grid-area:rebook}
 .p0850 #panel-table{grid-area:table}.p0850 #panel-chart{grid-area:chart}.p0850 #panel-issues{grid-area:issues}.p0850 #panel-ledger{grid-area:ledger}.p0850 #panel-review{grid-area:review}
+.rebook-tools{display:inline-flex;gap:8px;align-items:center;margin-left:auto}.rebook-form{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0}.rebook-form input[type=text],.rebook-form input:not([type]){min-width:150px}.rebook-form input[name=balance_cents],.rebook-form input[name=amount_cents]{min-width:170px}.today-check{display:inline-flex;gap:5px;align-items:center;white-space:nowrap}.rebook-table{min-width:860px}.rebook-table .num{text-align:right;font-family:var(--num)}.row-actions{display:flex;gap:6px;flex-wrap:wrap}.row-actions button{padding:5px 9px;font-size:12px}.today-chip{display:inline-block;margin-top:3px;padding:1px 7px;border-radius:999px;background:#e8f0ff;color:#244b9b;font-size:12px}.rebook-rule{margin:12px 0 0;color:var(--muted);font-size:13px;line-height:1.7}
 .p0850 .panel{border:1px dashed var(--line);border-radius:var(--radius);padding:18px}
 .p0850 .metric{border:1px dashed var(--line);border-radius:var(--radius);background:transparent}
 .p0850 .metric strong{font-size:clamp(24px,3.2vw,45px)}

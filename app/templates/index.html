@@ -9,6 +9,38 @@
     {{ ui.metric("m-rejected", "阻断项") }}
   </section>
   <section class="board">
+    <article class="panel panel-rebook" id="panel-rebook">
+      <div class="panel-head">
+        <h2>改期余额分配</h2>
+        <span class="hint" id="rebook-summary">提交改期单后显示每笔抵扣结果</span>
+        <div class="rebook-tools">
+          <button id="rebook-refresh" type="button">刷新结果</button>
+          <button id="rebook-demo" type="button">载入分配示例</button>
+        </div>
+      </div>
+      <form id="rebook-form" class="rebook-form" aria-label="提交改期单抵扣">
+        <input name="ticket_id" placeholder="原票号，如 T1" aria-label="原票号" required>
+        <input name="balance_cents" type="number" min="0" step="1" placeholder="原票余额分（新票填写）" aria-label="原票余额分">
+        <input name="order_id" placeholder="改期单号" aria-label="改期单号" required>
+        <input name="amount_cents" type="number" min="1" step="1" placeholder="申请抵扣分" aria-label="申请抵扣金额分" required>
+        <label class="today-check"><input name="today" type="checkbox"> 今日出票</label>
+        <button type="submit">提交抵扣</button>
+      </form>
+      <div class="table-wrap">
+        <table class="rebook-table">
+          <thead>
+            <tr>
+              <th>改期单</th><th>原票</th><th>申请抵扣</th><th>出票/到期</th>
+              <th>抵扣结果</th><th>已抵扣/退回</th><th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="rebook-body">
+            <tr><td class="empty" colspan="7">点击“载入分配示例”查看优先级、足额抵扣、撤销释放和重试结果</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="rebook-rule">规则：今日出票且可足额抵扣的单优先；整单抵扣，不先扣半截；剩余余额按最大票款抵扣组合分配。已确认抵扣不受后来申请影响，撤销未确认单只退回一次。</p>
+    </article>
     <article class="panel" id="panel-table">
       <div class="panel-head"><h2>批次结果</h2><span class="hint" id="row-count">--</span></div>
       <div class="table-wrap">
